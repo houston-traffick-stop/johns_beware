@@ -1,0 +1,368 @@
+/*
+	StyleSheet For Responsive Bootstrap Carousel
+	Author: SZThemes
+	Item Name: Responsive Bootstrap Carousel
+	Author URI: http://codecanyon.net/user/sz_themes
+	Description: Different Types of Bootstrap Carousel
+
+								Content List
+  -----------------------------------------------------------------------------------
+	NAME ----------------------------------------LINE NUMBER--------------------- #
+	SIMPLE CAROUSEL -----------------------------30------------------------------ 01
+	RESPONSIVE ----------------------------------223----------------------------- 02	
+	COLORS --------------------------------------316----------------------------- 03	
+	[ Note: Line Numbers Are According To Notepad++ ]
+  -----------------------------------------------------------------------------------
+							Fonts Styles
+  -----------------------------------------------------------------------------------
+	  'Raleway', sans-serif ---------------------------------- 01
+	            FontAwesome ---------------------------------- 02
+  -----------------------------------------------------------------------------------
+							Color Codes
+  -----------------------------------------------------------------------------------
+	NAME    ------------------------RGB-------------------------- #
+	#ffffff -------------------rgb(255, 255, 255)---------------- 01
+	#000000 -------------------rgb(0, 0, 0)---------------------- 02
+	#859eb4 -------------------rgb(133, 158, 180)---------------- 03 	Replace Also This Color To Change Whole Color Scheme
+*/
+
+/*------------------------------------------------------*/
+/* SIMPLE CAROUSEL
+/*------------------------------------------------------*/
+
+.simple_carousel_wrapper {
+  overflow: hidden;
+  max-height: 650px;
+}
+.simple_carousel_wrapper > .carousel-inner > .item > img,
+.simple_carousel_wrapper > .carousel-inner > .item > a > img {
+  margin: auto;
+  opacity: 0.8;
+  width: 100% !important;
+}
+/*---------- CONTROL INDICATORS ----------*/
+.simple_carousel_indicators li {
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+}
+.simple_carousel_indicators .active {
+  width: 10px;
+  margin: 1px;
+  height: 10px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+}
+/*---------- LEFT/RIGHT CONTROL ----------*/
+.simple_carousel_control_left,
+.simple_carousel_control_right {
+  top: 50%;
+  z-index: 2;
+  opacity: 0;
+  width: 55px;
+  height: 55px;
+  border: none;
+  text-align: center;
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+}
+.simple_carousel_wrapper:hover .simple_carousel_control_left,
+.simple_carousel_wrapper:hover .simple_carousel_control_right {
+  opacity: 1;
+}
+.simple_carousel_control_icons {
+  line-height: 55px;
+  font-size: 38px !important;
+  font-weight: normal !important;
+}
+.simple_carousel_control_left {
+  left: 1% !important;
+}
+.simple_carousel_control_right {
+  right: 1% !important;
+}
+/*---------- SCALE EFFECT ----------*/
+.simple_scale {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.simple_scale .item {
+  top: 0;
+  z-index: 1;
+  opacity: 0;
+  width: 100%;
+  position: absolute;
+  left: 0 !important;
+  display: block !important;
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  -webkit-transition: -webkit-transform 0.7s ease-in-out 0s, opacity ease-in-out 0.7s;
+  transition: transform 0.7s ease-in-out 0s, opacity ease-in-out 0.7s;
+}
+.simple_scale .item:first-child {
+  top: auto;
+  position: relative;
+}
+.simple_scale .item.active {
+  opacity: 1;
+  z-index: 2;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: -webkit-transform 0.7s ease-in-out 0s, opacity ease-in-out 0.7s;
+  transition: transform 0.7s ease-in-out 0s, opacity ease-in-out 0.7s;
+}
+/*---------- CAPTION ----------*/
+.simple_carousel_caption {
+  left: 15%;
+  width: 35%;
+  bottom: 50%;
+  text-align: left;
+  font-family: 'Raleway', sans-serif;
+}
+.simple_carousel_caption_right {
+  left: 60%;
+}
+.simple_carousel_caption_center {
+  left: 0%;
+  width: 100%;
+  text-align: center;
+}
+.simple_carousel_caption h1 {
+  font-size: 40px;
+  font-weight: 500;
+  text-shadow: none;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+  -webkit-animation-timing-function: cubic-bezier(.22,.81,.01,.99);
+  animation-timing-function: cubic-bezier(.22,.81,.01,.99);
+}
+.simple_carousel_caption p {
+  padding: 0%;
+  font-size: 20px;
+  text-shadow: none;
+  margin-bottom: 30px;
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+  -webkit-animation-timing-function: cubic-bezier(.22,.81,.01,.99);
+  animation-timing-function: cubic-bezier(.22,.81,.01,.99);
+}
+.simple_carousel_transparent_button,
+.simple_carousel_transparent_button:visited {
+  outline: 0;
+  width: auto;
+  height: 39px;
+  margin: 0 10px;
+  padding: 0 23px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: left;
+  text-shadow: none;
+  line-height: 39px;
+  position: relative;
+  font-style: normal;
+  white-space: nowrap;
+  letter-spacing: 1px;
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  font-family: 'Raleway', sans-serif;
+  -webkit-border-radius: 0px; 
+  -moz-border-radius: 0px;
+  border-radius: 0px; 
+  -webkit-box-sizing:initial !important;
+  -moz-box-sizing:initial !important;
+  box-sizing:initial !important;	
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+  -webkit-animation-timing-function: cubic-bezier(.22,.81,.01,.99);
+   animation-timing-function: cubic-bezier(.22,.81,.01,.99);
+}
+.simple_carousel_transparent_button:before {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: "";
+  z-index: -1;
+  position: absolute;
+  -webkit-border-radius: 0px; 
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 50%;
+  transform-origin: 50%;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out 0s;
+  transition: transform 0.3s ease-in-out 0s;
+}
+.simple_carousel_transparent_button:hover,
+.simple_carousel_transparent_button:active,
+.simple_carousel_transparent_button:focus {
+  box-shadow: none;	
+  outline: none !important;	
+}
+.simple_carousel_transparent_button:hover:before,
+.simple_carousel_transparent_button:focus:before,
+.simple_carousel_transparent_button:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+/*------------------------------------------------------*/
+/* RESPONSIVE
+/*------------------------------------------------------*/
+
+/*----------  MAX-WIDTH 480px  ----------*/
+@media only screen and (max-width: 480px) {
+  /*---------- CONTROL INDICATORS ----------*/
+  .simple_carousel_indicators {
+  display: none;
+  }
+  /*---------- LEFT/RIGHT CONTROL ----------*/
+  .simple_carousel_control_left,
+  .simple_carousel_control_right {
+    border: none;
+  }
+  .simple_carousel_control_icons {
+    font-size: 18px !important;
+  }
+  /*---------- CAPTION ----------*/
+  .simple_carousel_caption {
+    left: 0%;
+    width: 100%;
+    bottom: -10px;
+    text-align: center;
+  }
+  .simple_carousel_caption h1 {
+    font-size: 23px;
+     margin-bottom: 5px;
+  }
+  .simple_carousel_caption p {
+    font-size: 16px;
+    margin-bottom: 0px;
+  }
+  .simple_carousel_transparent_button,
+  .simple_carousel_transparent_button:visited {
+    margin: 0 0;
+    height: 27px;
+    padding: 0 13px;
+    line-height: 27px;
+  }
+}
+
+/*----------  MEDIA MIN-481px - MAX-600px  ----------*/
+@media (min-width: 481px) and (max-width: 600px) {
+  /*---------- CONTROL INDICATORS ----------*/
+  .simple_carousel_indicators {
+    display: none;
+  }
+  /*---------- LEFT/RIGHT CONTROL ----------*/
+  .simple_carousel_control_left,
+  .simple_carousel_control_right {
+    border: none;
+  }
+  /*---------- CAPTION ----------*/
+  .simple_carousel_caption {
+    left: 0%;
+    width: 100%;
+    bottom: -10px;
+    text-align: center;
+  }
+}
+
+/*----------  MEDIA MIN-601px - MAX-767px  ----------*/
+@media (min-width: 601px) and (max-width: 767px) {
+  /*---------- CAPTION ----------*/
+  .simple_carousel_caption {
+    left: 0%;
+    width: 100%;
+    bottom: 20px;
+    text-align: center;
+  }
+}
+
+/*----------  MEDIA MIN-768px - MAX-991px  ----------*/
+@media (min-width: 768px) and (max-width: 991px) {
+  /*---------- CONTROL INDICATORS ----------*/
+  .simple_carousel_indicators {
+    bottom: 0px;
+  }
+  /*---------- CAPTION ----------*/
+  .simple_carousel_caption {
+    bottom: 0px;
+  }
+}
+
+/*----------  MEDIA MIN-992px - MAX-1250px  ----------*/
+@media (min-width: 992px) and (max-width: 1250px) {
+  /*---------- CAPTION ----------*/
+  .simple_carousel_caption {
+    bottom: 25%;
+  }
+}
+
+/*------------------------------------------------------*/
+/* COLORS (PURPLE)
+/*------------------------------------------------------*/
+
+.simple_carousel_wrapper {
+  background: #000000;
+}
+/*---------- LEFT/RIGHT CONTROL ----------*/
+.simple_carousel_control_left,
+.simple_carousel_control_left:hover,
+.simple_carousel_control_left:active,
+.simple_carousel_control_left:focus,
+.simple_carousel_control_right,
+.simple_carousel_control_right:hover,
+.simple_carousel_control_right:active,
+.simple_carousel_control_right:focus {
+  background: transparent !important;
+}
+/*---------- CAPTION ----------*/
+.simple_carousel_caption h1 {
+  color: #ffffff !important;
+}
+.simple_carousel_caption p {
+  color: #ffffff !important;
+}
+.simple_carousel_transparent_button,
+.simple_carousel_transparent_button:visited {
+  color: #ffffff;
+}
+.simple_carousel_transparent_button:hover,
+.simple_carousel_transparent_button:active,
+.simple_carousel_transparent_button:focus {
+  color: #ffffff !important;
+}
+.simple_carousel_transparent_button,
+.simple_carousel_transparent_button:visited {
+  border: 3px solid #ffffff;
+}
+.simple_carousel_transparent_button:before {
+  background: #859eb4;
+}
+.simple_carousel_transparent_button,
+.simple_carousel_transparent_button:visited,
+.simple_carousel_transparent_button:hover,
+.simple_carousel_transparent_button:active,
+.simple_carousel_transparent_button:focus {
+  background: transparent !important;
+}
+.simple_carousel_transparent_button:hover,
+.simple_carousel_transparent_button:active,
+.simple_carousel_transparent_button:focus {
+  border-color: #859eb4 !important;
+}
+/*----------  END ----------*/
